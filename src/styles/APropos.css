@@ -1,0 +1,12 @@
+.img_apropos_Kasa {
+    border-radius: 25px;
+    margin-bottom: 50px;
+    width: 90%;
+    max-width: 1440px;
+}
+.a_propos_Kasa {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    object-fit: cover;
+}

@@ -1,7 +1,8 @@
 import Banner from './Banner'
 //import Body from './body'
 //import Cart from './Cart'
-import Error from './Error'
+//import Error from './Error'
+import APropos from './APropos'
 import Footer from './Footer'
 
 
@@ -10,8 +11,9 @@ function App() {
 		<div>
 			<Banner />
 			{/*<Body />
-			<Cart />*/}
-			<Error />
+			<Cart />
+			<Error />*/}
+			<APropos />
 			<Footer />
 		</div>
 	)
