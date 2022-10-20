@@ -1,0 +1,12 @@
+.kasa-Body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.Partout_Kasa {
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 223px;
+    border-radius: 25px;
+    object-fit: cover;
+}

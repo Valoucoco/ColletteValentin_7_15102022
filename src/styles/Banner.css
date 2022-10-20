@@ -1,0 +1,51 @@
+.kasa-Banner {
+    color: black;
+    text-align: right;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kasa-Banner a {
+	list-style-type: none;
+}
+
+.kasa-title {
+	padding-left: 32px;
+}
+
+.logo_Kasa {
+	height: 68px;
+	width: 210.32px;
+}
+
+.Header_menu {
+    list-style: none;
+    display: flex;
+    height: 34px;
+    width: 309px;
+    font-size: 24px;
+    color: #FF6060;
+    justify-content: space-around;
+}
+
+.Header_menu li :nth-child(1) {
+	height: 34px;
+	width: 136px;
+}
+
+.Header_menu li :nth-child(2) {
+	height: 34px;
+	width: 116px;
+}
+
+.Header_menu :hover{
+	border-bottom: 2px solid #FF6060;
+}
+
+.kasa-Body {
+		display: flex;
+		justify-content: center;
+}
