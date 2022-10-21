@@ -1,3 +1,9 @@
+.accordions {
+    margin: 0 auto;
+    max-width: 1120px;
+    margin-bottom: 60px;
+}
+
 .accordion__title {
     display: flex;
     align-items: center;
@@ -17,15 +23,6 @@
     background: #FF6060;
 }
 
-.accordion__icon {
-    position: relative;
-    width: 10px;
-    height: 1px;
-    
-    
-}
-
-
 .accordion__content {
     visibility: hidden;
     height: auto;
@@ -33,7 +30,6 @@
     overflow: hidden;
     padding: 0 1rem;
     transition: all .2s ease-in;
-    margin-bottom: 10px;
 }
 
 .active .accordion__content {
@@ -52,10 +48,17 @@
     line-height: 142.6%;
     font-weight: 400;
 }
+
+.false {
+    height: 80px;
+}
+
 .active i {
-    transform:rotate(180deg);
+    
     transition: 0.5s;
 }
+
 .false i {
+    transform:rotate(180deg);
     transition: 0.3s;
 }
