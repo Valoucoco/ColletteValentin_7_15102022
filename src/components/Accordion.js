@@ -8,7 +8,7 @@ const [active, setActive] = useState(false);
 
 const handleToggle = (e) => {
     setActive(!active);
-    console.log(handleToggle)
+    console.log(e)
 };
 return (
     <div className={`accordion ${active && 'active'}`}>

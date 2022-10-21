@@ -67,3 +67,7 @@
     line-height: 142.6%;
     font-weight: 400;
 }
+.accordion.active i {
+    transform:rotate(180deg);
+    transition: 0.3s;
+}
