@@ -25,21 +25,6 @@
     
 }
 
-.accordion__icon::before {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 1px;
-    background: #333;
-    transform: rotate(-90deg);
-    transition: all .2s;
-
-}
-
-.active .accordion__icon::before{
-    transform: rotate(90deg);
-    opacity: 1;
-}
 
 .accordion__content {
     visibility: hidden;
@@ -67,7 +52,10 @@
     line-height: 142.6%;
     font-weight: 400;
 }
-.accordion.active i {
+.active i {
     transform:rotate(180deg);
+    transition: 0.5s;
+}
+.false i {
     transition: 0.3s;
 }
