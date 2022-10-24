@@ -1,22 +1,24 @@
 import Banner from './Banner'
-//import Body from './body'
-//import Cart from './Cart'
+import Body from './body'
+import Cart from './Cart'
 //import Error from './Error'
-import APropos from './APropos'
+//import APropos from './APropos'
+//import Logement from './Logement'
 import Footer from './Footer'
 
 
 function App() {
 	return (
-		<div>
+			<main>
 			<Banner />
-			{/*<Body />
+			<Body />
 			<Cart />
-			<Error />*/}
+			{/*<Error />
 			<APropos />
+			<Logement />*/}
 			<Footer />
-		</div>
-	)
+			</main>
+			)
 }
 
 export default App

@@ -3,7 +3,11 @@ import Partout_Kasa from '../assets/Partout_Kasa.png'
 
 function Body({ children }) {
 	return <div className='kasa-Body'>{children}
-        <img src={Partout_Kasa} alt='Chez vous et partout ailleurs' className='Partout_Kasa' />
+            <div className="section__p">
+                <p style={{
+                backgroundImage: `url(${(Partout_Kasa)})`
+                }}>Chez vous, partout et ailleurs</p>
+            </div>
     </div>
 }
 

@@ -6,8 +6,8 @@ function A_propos() {
 	return (
 	<>
 		<div className='a_propos_Kasa'>{}
-	<img src={img_apropos_Kasa} alt='Un paysage montagneux' className='img_apropos_Kasa' />
-					</div>
+			<img src={img_apropos_Kasa} alt='Un paysage montagneux' className='img_apropos_Kasa' />
+		</div>
 		<main className="accordions">
 		<Accordion
 			title="Fiabilité"

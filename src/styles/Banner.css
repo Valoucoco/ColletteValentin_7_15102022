@@ -46,8 +46,3 @@
 .Header_menu :hover{
 	border-bottom: 2px solid #FF6060;
 }
-
-.kasa-Body {
-		display: flex;
-		justify-content: center;
-}

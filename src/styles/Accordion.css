@@ -29,7 +29,7 @@
     opacity: 0;
     overflow: hidden;
     padding: 0 1rem;
-    transition: all .2s ease-in;
+    transition: all .15s ease-in;
 }
 
 .active .accordion__content {
@@ -39,6 +39,7 @@
     height: 130px;
     overflow: visible;
     padding: 1rem;
+    transition: 0.3s;
     opacity: 1;
     border-radius: 5px;
     background: #f7f7f7;

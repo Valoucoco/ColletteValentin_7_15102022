@@ -4,16 +4,16 @@ console.log(LogementData)
 
 function Cart() {
     return (
-        <main>
             <section className="Gallery">
                 {LogementData.map((l) => (
-                <div className="boxKey" key={l.id}>
+                <div className="boxKey" key={l.id} 
+                style={{
+                backgroundImage: `url(${(l.cover)})`
+                }}>
                     <p className="boxTitre">{l.title}</p>
-                    <img className="boxImg" src={l.cover} alt="" />
                 </div>
                 ))}
             </section>
-        </main>
         );
 }
 export default Cart

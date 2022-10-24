@@ -1,12 +1,21 @@
-.kasa-Body {
+.section__p {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
 }
-.Partout_Kasa {
-    margin-left: 100px;
-    margin-right: 100px;
-    height: 223px;
-    border-radius: 25px;
+
+.section__p p {
+    color: white;
+    font-size: 38px;
+    display: flex;
+    width: 95%;
+    height: 220px;
+    background-position: center;
     object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-size: cover;
+    background-color: #0000004d;
+    background-blend-mode: darken;
 }
