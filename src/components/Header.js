@@ -1,4 +1,4 @@
-import '../styles/Banner.css'
+import '../styles/Header.css'
 import logo_Kasa from '../assets/logo_Kasa.png'
 
 
@@ -10,7 +10,6 @@ function Banner({ children }) {
 						<li>A Propos</li>
 					</ul>
 					</div>
-	
 }
 
 export default Banner

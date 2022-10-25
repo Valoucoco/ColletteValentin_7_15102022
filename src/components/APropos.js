@@ -1,4 +1,4 @@
-import '../styles/APropos.css'
+import '../styles/Apropos.css'
 import img_apropos_Kasa from '../assets/d_a-propos_Kasa.png'
 import Accordion from './Accordion';
 
