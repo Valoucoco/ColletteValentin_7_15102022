@@ -1,13 +1,14 @@
 import '../styles/Header.css'
 import logo_Kasa from '../assets/logo_Kasa.png'
+import { Link } from 'react-router-dom'
 
 
-function Banner({ children }) {
-	return <div className='kasa-Banner'>{children}
+function Banner() {
+	return <div className='kasa-Banner'>
 	<img src={logo_Kasa} alt='logo de Kasa' className='logo_Kasa' />
 					<ul className='Header_menu'>
-						<li>Accueil</li>
-						<li>A Propos</li>
+						<Link to="/"><span>Accueil</span></Link>
+						<Link to="/Apropos"><span className='Border'>A Propos</span></Link>
 					</ul>
 					</div>
 }

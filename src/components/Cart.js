@@ -1,12 +1,11 @@
 import '../styles/Cart.css'
 import LogementData from '../datas/logement_data.json'
 import Partout_Kasa from '../assets/Partout_Kasa.png'
+import { Link } from 'react-router-dom';
 
 function Cart() {
+
     return (
-
-        
-
         <section className="Gallery">
             <div className='kasa-Body'>
                 <div className="section__p">
@@ -16,12 +15,14 @@ function Cart() {
                 </div>
             </div>
                 {LogementData.map((l) => (
-                <div className="boxKey" key={l.id} 
-                style={{
-                backgroundImage: `url(${(l.cover)})`
-                }}>
-                    <p className="boxTitre">{l.title}</p>
-                </div>
+                <Link to={`/fiche_logement/${l.id}`}>
+                    <div className="boxKey" key={l.id} 
+                    style={{
+                    backgroundImage: `url(${(l.cover)})`
+                    }}>
+                        <p className="boxTitre">{l.title}</p>
+                    </div>
+                </Link>
                 ))}
             </section>
         );

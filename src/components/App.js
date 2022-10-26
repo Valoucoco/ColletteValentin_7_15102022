@@ -3,9 +3,13 @@ import Header from './Header'
 import Cart from './Cart'
 import Error from './Error'
 import Apropos from './Apropos'
-import Logement from './Logement'
+import Fiche_logement from './Fiche_logement'
 import Footer from './Footer'
+import data from '../datas/logement_data.json'
 
+// for (let i = 0; i < data.length; i++) {
+// 	console.log('ici',data[i].id)
+// }
 
 function App() {
 	return (
@@ -25,10 +29,10 @@ function App() {
 						<Footer/>
 					</>}
 				/>
-				<Route path="/Logement"
+				<Route path="/Fiche_logement/:id"
 					element={<>
 					<Header/>
-					<Logement />
+					<Fiche_logement />
 					<Footer/>
 					</>}
 				/>

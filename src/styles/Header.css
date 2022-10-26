@@ -33,16 +33,13 @@
     justify-content: space-between;
 }
 
-.Header_menu li :nth-child(1) {
+.Header_menu a {
 	height: 34px;
 	width: 136px;
+    text-decoration: none;
+    color:#FF6060;
 }
 
-.Header_menu li :nth-child(2) {
-	height: 34px;
-	width: 116px;
-}
-
-.Header_menu :hover{
-	border-bottom: 2px solid #FF6060;
+.Header_menu a :hover{
+	border-bottom: 3px solid #FF6060;
 }
