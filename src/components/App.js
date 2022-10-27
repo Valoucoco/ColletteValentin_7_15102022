@@ -5,7 +5,6 @@ import Error from './Error'
 import Apropos from './Apropos'
 import Fiche_logement from './Fiche_logement'
 import Footer from './Footer'
-//import data from '../data/logement_data.json'
 
 // for (let i = 0; i < toto.length; i++) {
     //         console.log(id , data[i].id)

@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 import data from '../data/logement_data'
 import {useParams} from 'react-router-dom'
 import {Slide} from 'react-slideshow-image'
+import 'react-slideshow-image/dist/styles.css'
 
 const properties = {
     duration: 5000,
@@ -36,17 +37,24 @@ function FicheLogement() {
     }, [id])
 
 console.log(logement.pictures)
-let compteur = 0;
 
     return (
         <div className='containerSlide'>
             <Slide {...properties}>
                 <div className='each-slide'>
-                    {logement.pictures.map((l) => (
                             <div className="slidePicture" key={logement.id}>
-                                <img src= {logement.pictures[compteur]} alt='img' />
+                                <img src= {logement.pictures[1]} alt='img' />
                             </div>
-                    ))}
+                </div>
+                <div className='each-slide'>
+                            <div className="slidePicture" key={logement.id}>
+                                <img src= {logement.pictures[2]} alt='img' />
+                            </div>
+                </div>
+                <div className='each-slide'>
+                            <div className="slidePicture" key={logement.id}>
+                                <img src= {logement.pictures[3]} alt='img' />
+                            </div>
                 </div>
             </Slide>
         </div>
@@ -54,3 +62,11 @@ let compteur = 0;
 }
 
 export default FicheLogement
+
+
+
+/*
+{logement.pictures.map((l) => (
+
+                    ))}
+*/
