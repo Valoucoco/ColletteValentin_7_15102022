@@ -1,31 +1,56 @@
 import '../styles/Fiche_logement.css'
 import React, {useEffect, useState} from 'react'
-//import {useParams} from "react-router-dom"
-//import axios from 'axios'
-import data from '../datas/logement_data.json'
-console.log('ras', data)
+import data from '../data/logement_data'
+import {useParams} from 'react-router-dom'
+import {Slide} from 'react-slideshow-image'
+
+const properties = {
+    duration: 5000,
+    transitionDuration: 500,
+    infinite: true,
+    indicators: true,
+    arrows: true
+}
 
 
-function Logement(data) {
-    let id = useEffect()
-    console.log('id de la page',id)
+
+function FicheLogement() {
+    const [logement, setLogement] = useState({ tags: [], equipments: [], pictures: [], rating: '', host: { 'name': '', 'picture': '' } })
+    const { id } = useParams()
+
+
+
+
+
+
+
 
     useEffect(() => {
-        fetch(data)
-        .then((res) => {
-            console.log("BingoFetch", res)
+        data.map((house) => {
+            if (house.id === id) {
+                console.log(house)
+                setLogement(house)
+            }
+            return null
         })
-        .catch(err => {
-            console.log("oups", err)
-        })
-    })
+    }, [id])
 
+console.log(logement.pictures)
+let compteur = 0;
 
-
-/////////////////////////////////////////
-
-	return <div className='Chose'>
-        <p>coucou</p>
-    </div>
+    return (
+        <div className='containerSlide'>
+            <Slide {...properties}>
+                <div className='each-slide'>
+                    {logement.pictures.map((l) => (
+                            <div className="slidePicture" key={logement.id}>
+                                <img src= {logement.pictures[compteur]} alt='img' />
+                            </div>
+                    ))}
+                </div>
+            </Slide>
+        </div>
+    )
 }
-export default Logement
+
+export default FicheLogement

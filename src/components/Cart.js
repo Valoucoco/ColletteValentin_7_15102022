@@ -1,5 +1,5 @@
 import '../styles/Cart.css'
-import LogementData from '../datas/logement_data.json'
+import LogementData from '../data/logement_data.json'
 import Partout_Kasa from '../assets/Partout_Kasa.png'
 import { Link } from 'react-router-dom';
 
