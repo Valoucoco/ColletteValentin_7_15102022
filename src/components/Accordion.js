@@ -6,18 +6,6 @@ const chevron = <i class="fa-solid fa-chevron-up"></i>;
 function Accordion({ title, content }) {
   const [active, setActive] = useState(false);
 
-  /*
-const handleToggle = (e) => {
-    setActive(!active);
-};
-
-   <div className="accordion__title" onClick={handleToggle}>
-*/
-
-  /*
-    <div className="accordion__title" onClick={(e) => { setActive(!active);}}>
-*/
-
   const handleToggle = (e) => {
     setActive(!active);
   };

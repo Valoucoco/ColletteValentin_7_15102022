@@ -15,8 +15,8 @@ function Cart() {
                 </div>
             </div>
                 {LogementData.map((l) => (
-                <Link to={`/fiche_logement/${l.id}`}>
-                    <div className="boxKey" key={l.id} 
+                <Link key={l.id} to={`/fiche_logement/${l.id}`}>
+                    <div className="boxKey" 
                     style={{
                     backgroundImage: `url(${(l.cover)})`
                     }}>

@@ -3,8 +3,10 @@ import Header from './Header'
 import Cart from './Cart'
 import Error from './Error'
 import Apropos from './Apropos'
-import Fiche_logement from './Fiche_logement'
+import Slideshow from './Slideshow'
 import Footer from './Footer'
+// import Fiche_Logement from './Fiche_Logement'
+
 
 // for (let i = 0; i < toto.length; i++) {
     //         console.log(id , data[i].id)
@@ -31,7 +33,8 @@ function App() {
 				<Route path="/Fiche_logement/:id"
 					element={<>
 					<Header/>
-					<Fiche_logement />
+					<Slideshow />
+					{/* <Fiche_Logement /> */}
 					<Footer/>
 					</>}
 				/>
