@@ -5,13 +5,6 @@ import {useParams} from 'react-router-dom'
 import {Slide} from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 
-const properties = {
-    duration: 50000,
-    transitionDuration: 500,
-    infinite: true,
-    indicators: true,
-    arrows: true
-}
 
 
 
@@ -19,40 +12,34 @@ function FicheLogement() {
     const [logement, setLogement] = useState({ tags: [], equipments: [], pictures: [], rating: '', host: { 'name': '', 'picture': '' } })
     const { id } = useParams()
 
-
-
-
-
-
-
-
     useEffect(() => {
         data.map((house) => {
             if (house.id === id) {
-                //console.log(house)
                 setLogement(house)
             }
             return null
         })
     }, [id])
 
-let logementPictures = logement.pictures
 
-console.log(logementPictures.length)
+    console.log(logement)
 
-
-for (let i = 0; i < logementPictures.length; i++) {
-            console.log(logementPictures[i])
-        }
-
+    const properties = {
+        duration: 50000,
+        transitionDuration: 500,
+        infinite: true,
+        indicators: true,
+        arrows: true
+    }
+    
 
     return (
         <div className='containerSlide'>
-            <Slide>
-                {logementPictures.map((l, index) => (
+            <Slide {...properties}>
+                {logement.pictures.map((l, index) => (
                     <div className='each-slide'>
                                 <div className="slidePicture" key={l.id}>
-                                    <img src= {logementPictures[index]} alt='img' />
+                                    <img src= {logement.pictures[index]} alt='img' />
                                 </div>
                     </div>
                 ))}
@@ -62,11 +49,3 @@ for (let i = 0; i < logementPictures.length; i++) {
 }
 
 export default FicheLogement
-
-
-
-/*
-{logement.pictures.map((l) => (
-
-                    ))}
-*/
