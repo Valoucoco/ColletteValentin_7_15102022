@@ -3,9 +3,9 @@ import Header from './Header'
 import Cart from './Cart'
 import Error from './Error'
 import Apropos from './Apropos'
-import Slideshow from './Slideshow'
+// import Slideshow from './Slideshow'
 import Footer from './Footer'
-// import Fiche_Logement from './Fiche_Logement'
+import Fiche_Logement from './Fiche_Logement'
 
 
 // for (let i = 0; i < toto.length; i++) {
@@ -33,8 +33,8 @@ function App() {
 				<Route path="/Fiche_logement/:id"
 					element={<>
 					<Header/>
-					<Slideshow />
-					{/* <Fiche_Logement /> */}
+					{/* <Slideshow/> */}
+					<Fiche_Logement />
 					<Footer/>
 					</>}
 				/>

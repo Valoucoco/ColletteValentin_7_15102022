@@ -1,4 +1,4 @@
-
+/* 
 .each-slide img {
     border-radius: 25px;
     width: 100%;
@@ -20,4 +20,49 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+} */
+
+.slider {
+    /* position: relative;
+    text-align: center;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 50px;
+    height: 100%;
+    border-radius: 25px;
+} */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 25px;
 }
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.active img {
+    object-fit: cover;
+    border-radius: 25px;
+}
+
