@@ -27,4 +27,4 @@ function Fiche_Logement() {
     )
 }
 
-export default Slideshow
+export default Fiche_Logement

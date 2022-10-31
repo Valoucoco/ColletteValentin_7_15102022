@@ -44,19 +44,21 @@ console.log(current)
 ////////////////////RETURN////////////////////
 
     return (
-        <div className='slider'>
-            <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide}/>
+        <section className='section_slider'>
+                <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide}/>
+            <div className='slider'>
+            {logement.pictures.map((l, index) => {
+                return (
+                    <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                        {index === current && (
+                        <img src= {logement.pictures[index]} alt='img' className='imageOfSlider'/>
+                        )}
+                    </div>
+                )
+            })}
+            </div>
             <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide}/>
-        {logement.pictures.map((l, index) => {
-            return (
-                <div className={index === current ? 'slide active' : 'slide'} key={index}>
-                    {index === current && (
-                    <img src= {logement.pictures[index]} alt='img' className='imageOfSlider'/>
-                    )}
-                </div>
-            )
-        })}
-        </div>
+        </section>
     )
 }
             export default Slideshow

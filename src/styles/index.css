@@ -10,8 +10,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.kasa_Banner, .Error {
-  
+.kasa-Banner, .Error, .kasa-Footer {
   max-width: 1440px;
   margin: auto;
 }
