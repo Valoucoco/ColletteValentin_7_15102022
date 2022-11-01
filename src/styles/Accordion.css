@@ -63,3 +63,26 @@
     transform:rotate(180deg);
     transition: 0.3s;
 }
+
+.Accordion_Logement {
+    display: flex;
+    justify-content: center;
+}
+
+.Accordion_Logement .false {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+    margin: 0px 100px 0px 100px;
+}
+
+.Accordion_Logement .active {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+    margin: 0px 100px 0px 100px;
+}
+
+/* //////////////////////////////////*/

@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 import data from '../data/logement_data'
 import {useParams} from 'react-router-dom'
 import 'react-slideshow-image/dist/styles.css'
-import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 
 function Slideshow() {
@@ -22,7 +22,6 @@ function Slideshow() {
         })
     }, [id])
 
-
 ////////////////////CURRENT-IMAGE////////////////////
 
     const [current, setCurrent] = useState(0)
@@ -40,24 +39,28 @@ function Slideshow() {
         return null
     }
 
-console.log(current)
+
 ////////////////////RETURN////////////////////
 
     return (
         <section className='section_slider'>
-                <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide}/>
+                <FiChevronLeft className='left-arrow' onClick={prevSlide}/>
             <div className='slider'>
             {logement.pictures.map((l, index) => {
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} key={index}>
                         {index === current && (
-                        <img src= {logement.pictures[index]} alt='img' className='imageOfSlider'/>
+                        <div className="image_slider" 
+                            style={{
+                                backgroundImage: `url(${(logement.pictures[index])})`
+                            }}>
+                        </div>
                         )}
                     </div>
                 )
             })}
             </div>
-            <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide}/>
+            <FiChevronRight className='right-arrow' onClick={nextSlide}/>
         </section>
     )
 }

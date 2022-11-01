@@ -1,4 +1,4 @@
-import "../styles/Accordion.css";
+import '../styles/Accordion.css'
 import { useState } from "react";
 import React from "react";
 const chevron = <i class="fa-solid fa-chevron-up"></i>;
