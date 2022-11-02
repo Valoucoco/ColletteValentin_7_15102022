@@ -5,47 +5,37 @@ import Error from './Error'
 import Apropos from './Apropos'
 import Slideshow from './Slideshow'
 import Footer from './Footer'
-import Fiche_Logement from './Fiche_Logement'
+import FicheLogement from './FicheLogement'
 
-
-// for (let i = 0; i < toto.length; i++) {
-    //         console.log(id , data[i].id)
-    //     }
 
 function App() {
 	return (
 			<main>
-			<Routes>
-				<Route exact path="/" 
-					element={<>
-						<Header/>
-						<Cart/>
-						<Footer/>
-					</>}
-				/>
-				<Route path="/Apropos"
-					element={<>
-						<Header/>
-						<Apropos />
-						<Footer/>
-					</>}
-				/>
-				<Route path="/Fiche_logement/:id"
-					element={<>
-					<Header/>
-					<Slideshow/>
-					<Fiche_Logement />
-					<Footer/>
-					</>}
-				/>
-				<Route path="*"
-					element={<>
-					<Header/>
-					<Error />
-					<Footer/>
-					</>}
-				/>
-			</Routes>
+				<Header />
+					<Routes>
+						<Route exact path="/" 
+							element={<>
+								<Cart/>
+							</>}
+						/>
+						<Route path="/Apropos"
+							element={<>
+								<Apropos />
+							</>}
+						/>
+						<Route path="/Fiche_logement/:id"
+							element={<>
+							<Slideshow/>
+							<FicheLogement />
+							</>}
+						/>
+						<Route path="*"
+							element={<>
+							<Error />
+							</>}
+						/>
+					</Routes>
+				<Footer />
 			</main>
 			)
 }
