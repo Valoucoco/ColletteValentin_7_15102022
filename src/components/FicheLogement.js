@@ -25,8 +25,6 @@ function FicheLogement({ title, content }) {
     });
     }, [id]);
 
-    console.log("ici", logement.equipments);
-
     if (logement.title === undefined) {
         return <Error />;
     }
@@ -35,13 +33,29 @@ function FicheLogement({ title, content }) {
     // const equipment = logement.equipments;
     // const location = logement.location;
     const logementEquipments = logement.equipments
+    const logementTags = logement.tags
 
     const map_Logement = logementEquipments.map((l, index) => (
         <p className="p_equipement_logement">{logement.equipments[index]}</p>
     ))
 
+    const map_Tags = logementTags.map((l, index) => (
+        <p className="p_equipement_logement" key={logement.tags[index]}>{logement.tags[index]}</p>
+    ))
+
     return (
         <section>
+            <article className="info_Logement_Container">
+                <h1>{logement.title}</h1>
+                <h2>{logement.location}</h2>
+                <div className="tags_Container">
+                    {map_Tags}
+                </div>
+                <div>
+                    <span>{logement.name}</span>
+
+                </div>
+            </article>
             <div className="Accordion_Logement">
                 <AccordionLogement  
                     title="Description" 
