@@ -2,9 +2,10 @@ import data from "../data/logement_data.json";
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import "../styles/Accordion.css";
-import "../styles/Fiche_Logement.css"
+import "../styles/Fiche_Logement.css";
 import AccordionLogement from "./AccordionLogement";
-import Error from './Error'
+import Error from './Error';
+import Rate from '../components/Rate';
 
 function FicheLogement({ title, content }) {
     const [logement, setLogement] = useState({
@@ -42,10 +43,13 @@ function FicheLogement({ title, content }) {
     const logementTags = logement.tags;
     const logementHostName = logement.host.name;
     const logementHostPicture = logement.host.picture;
+    const logementRating = logement.rating
+
     ////////////////--  map() des équipements  --////////////////
     const map_LogementEquipement = logementEquipments.map((l, index) => (
         <p className="p_equipement_logement">{logement.equipments[index]}</p>
     ))
+
     ////////////////--  map() des tags  --////////////////
     const map_logementTags = logementTags.map((l, index) => (
         <p className="p_equipement_logement" key={logement.tags[index]}>{logement.tags[index]}</p>
@@ -55,34 +59,46 @@ function FicheLogement({ title, content }) {
 
     return (
         <section>
-            <article className="info_Logement_Container">
+
+            <figure className="infoLogementContainer">
 
                 <h1>{logementTitle}</h1>
 
                 <h2>{logementLocation}</h2>
 
-                <div className="tags_Container">
+                <div className="tagsContainer">
                     {map_logementTags}
                 </div>
 
-                <div>
-                    <h3>{logementName}</h3>
-                    <img className="logementHostPicture"
-                        src={logementHostPicture}
-                        alt="Portrait de l'annonceur"
-                    />
-                </div>
+                <figcaption className="moreInfoContainer">
+                    <div className="logementNamePortrait">
+                        <h3>{logementHostName}</h3>
+                        <img className="logementHostPicture"
+                            src={logementHostPicture}
+                            alt="Portrait de l'annonceur"
+                        />
+                    </div>
 
-            </article>
+                    <div className='logementRating'>
+                        <Rate 
+                            logement={logementRating}
+                        />
+                    </div>
+                </figcaption>
+
+            </figure>
+
             <div className="Accordion_Logement">
                 <AccordionLogement  
                     title="Description" 
-                    content={logementDescription}/>
-
+                    content={logementDescription}
+                />
                 <AccordionLogement  
                     title="Equipements" 
-                    content={<div className='equipments'>{map_LogementEquipement}</div>} />
+                    content={<div className='equipments'>{map_LogementEquipement}</div>}
+                />
             </div>
+
         </section>
     );
     }
