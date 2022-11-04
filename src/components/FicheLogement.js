@@ -6,6 +6,7 @@ import "../styles/Fiche_Logement.css";
 import AccordionLogement from "./AccordionLogement";
 import Error from './Error';
 import Rate from '../components/Rate';
+import Tags from './Tags';
 
 function FicheLogement({ title, content }) {
     const [logement, setLogement] = useState({
@@ -62,12 +63,14 @@ function FicheLogement({ title, content }) {
 
             <figure className="infoLogementContainer">
 
-                <h1>{logementTitle}</h1>
+                <div className="infoLogement">
+                    <h1>{logementTitle}</h1>
 
-                <h2>{logementLocation}</h2>
+                    <h2>{logementLocation}</h2>
 
-                <div className="tagsContainer">
-                    {map_logementTags}
+                    <div className="tagsContainer">
+                        <Tags logement={logement} />
+                    </div>
                 </div>
 
                 <figcaption className="moreInfoContainer">
