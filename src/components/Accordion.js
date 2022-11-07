@@ -1,7 +1,7 @@
 import '../styles/Accordion.css'
 import { useState } from "react";
 import React from "react";
-const chevron = <i class="fa-solid fa-chevron-up"></i>;
+const chevron = <i className="fa-solid fa-chevron-up"></i>;
 
 function Accordion({ title, content }) {
   const [active, setActive] = useState(false);

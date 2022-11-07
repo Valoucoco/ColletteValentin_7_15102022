@@ -1,4 +1,4 @@
-import '../styles/Error.css'
+import './Error.css'
 function Error() {
 	return (
 		<div className='Error'>

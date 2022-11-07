@@ -1,6 +1,6 @@
 import React from "react";
-import Star from '../assets/Star.png'
-import StarEmpty from '../assets/StarEmpty.png';
+import Star from '../../assets/Star.png'
+import StarEmpty from '../../assets/StarEmpty.png';
 
 function Rate({ logement }) {
 const ratingScore = [1, 2, 3, 4, 5]

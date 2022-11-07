@@ -1,6 +1,6 @@
-import '../styles/Slideshow.css'
+import './Slideshow.css'
 import React, {useEffect, useState} from 'react'
-import data from '../data/logement_data'
+import data from '../../data/logement_data'
 import {useParams} from 'react-router-dom'
 import 'react-slideshow-image/dist/styles.css'
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";

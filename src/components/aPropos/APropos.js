@@ -1,6 +1,6 @@
-import '../styles/Apropos.css'
-import imgAproposKasa from '../assets/d_a-propos_Kasa.png'
-import Accordion from './Accordion';
+import './aPropos.css'
+import imgAproposKasa from '../../assets/d_a-propos_Kasa.png'
+import Accordion from '../Accordion';
 
 function A_propos() {
 	return (

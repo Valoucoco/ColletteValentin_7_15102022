@@ -1,11 +1,11 @@
 import {Routes, Route} from "react-router-dom"
-import Header from './Header'
+import Header from './Header/Header'
 import Cart from './Cart'
-import Error from './Error'
-import Apropos from './Apropos'
-import Slideshow from './Slideshow'
-import Footer from './Footer'
-import FicheLogement from './FicheLogement'
+import Error from './Error/Error'
+import APropos from './aPropos/APropos'
+import Slideshow from './FicheLogement/Slideshow'
+import Footer from './Footer/Footer'
+import FicheLogement from './FicheLogement/FicheLogement'
 
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
 								<Cart/>
 							</>}
 						/>
-						<Route path="/Apropos"
+						<Route path="/aPropos"
 							element={<>
-								<Apropos />
+								<APropos />
 							</>}
 						/>
 						<Route path="/Fiche_logement/:id"

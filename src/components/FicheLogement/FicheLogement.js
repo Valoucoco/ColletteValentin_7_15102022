@@ -1,11 +1,11 @@
-import data from "../data/logement_data.json";
+import data from "../../data/logement_data.json";
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import "../styles/Accordion.css";
-import "../styles/FicheLogement.css";
+import "../../styles/Accordion.css";
+import "./FicheLogement.css";
 import AccordionLogement from "./AccordionLogement";
-import Error from './Error';
-import Rate from '../components/Rate';
+import Error from '../Error/Error';
+import Rate from './Rate';
 import Tags from './Tags';
 
 function FicheLogement({ title, content }) {
@@ -53,6 +53,7 @@ function FicheLogement({ title, content }) {
 
     return (
         <section>
+            
 
             <figure className="infoLogementContainer">
 
