@@ -11,10 +11,10 @@ function Accordion({ title, content }) {
   };
   return (
     <div className={`accordion ${active && "active"}`}>
-      <div className="accordion__title" onClick={handleToggle}>
+      <div className="accordionTitle" onClick={handleToggle}>
         {title} <div>{chevron}</div>
       </div>
-      <div className="accordion__content">{content}</div>
+      <div className="accordionContent">{content}</div>
     </div>
   );
 }

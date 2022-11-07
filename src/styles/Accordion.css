@@ -4,7 +4,7 @@
     margin-bottom: 60px;
 }
 
-.accordion__title {
+.accordionTitle {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,17 +13,16 @@
     font-weight: bold;
     border-radius: 5px;
     color: white;
-    font-family: 'Montserrat';
     font-size: 24px;
     height: 15px;
 }
 
-.accordion__title:hover,.active .accordion__title {
+.accordionTitle:hover,.active .accordionTitle {
     cursor: pointer;
     background: #FF6060;
 }
 
-.accordion__content {
+.accordionContent {
     visibility: hidden;
     height: auto;
     opacity: 0;
@@ -32,7 +31,7 @@
     transition: all .15s ease-in;
 }
 
-.active .accordion__content {
+.active .accordionContent {
     display: flex;
     align-items: center;
     visibility: visible;
@@ -63,12 +62,12 @@
     transition: 0.3s;
 }
 
-.Accordion_Logement {
+.AccordionLogement {
     display: flex;
     justify-content: center;
 }
 
-.Accordion_Logement .false {
+.AccordionLogement .false {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -76,7 +75,7 @@
     margin: 0px 100px 0px 100px;
 }
 
-.Accordion_Logement .active {
+.AccordionLogement .active {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -84,4 +83,3 @@
     margin: 0px 100px 0px 100px;
 }
 
-/* //////////////////////////////////*/

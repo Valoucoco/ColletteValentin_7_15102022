@@ -1,10 +1,10 @@
-.img_apropos_Kasa {
+.imgAproposKasa {
     border-radius: 25px;
     margin-bottom: 50px;
     width: 90%;
     max-width: 1240px;
 }
-.a_propos_Kasa {
+.aProposKasa {
     display: flex;
     justify-content: center;
     margin: 0 auto;

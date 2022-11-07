@@ -4,6 +4,16 @@
     flex-wrap: wrap;
 	justify-content: space-evenly;
 }
+
+.galleryImage {
+	background: #F7F7F7;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-evenly;
+	border-radius: 25px;
+}
+
 .boxTitre {
 	position: absolute;
 	left: 5.88%;
@@ -24,9 +34,8 @@
 	position: relative;
 	display: flex;
 	margin: 40px 30px 30px 30px;
-	border-radius: 25px;
+	border-radius: 10px;
 	z-index: 1;
-	background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(5 18 255) 100%);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;

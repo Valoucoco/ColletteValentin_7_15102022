@@ -4,7 +4,6 @@ import StarEmpty from '../assets/StarEmpty.png';
 
 function Rate({ logement }) {
 const ratingScore = [1, 2, 3, 4, 5]
-
 return (
     <div>
             {ratingScore.map((ratingElem) =>

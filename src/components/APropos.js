@@ -1,12 +1,12 @@
 import '../styles/Apropos.css'
-import img_apropos_Kasa from '../assets/d_a-propos_Kasa.png'
+import imgAproposKasa from '../assets/d_a-propos_Kasa.png'
 import Accordion from './Accordion';
 
 function A_propos() {
 	return (
 	<>
-		<div className='a_propos_Kasa'>{}
-			<img src={img_apropos_Kasa} alt='Un paysage montagneux' className='img_apropos_Kasa' />
+		<div className='aProposKasa'>{}
+			<img src={imgAproposKasa} alt='Un paysage montagneux' className='imgAproposKasa' />
 		</div>
 		<main className="accordions">
 		<Accordion

@@ -1,7 +1,7 @@
 import '../styles/Accordion.css'
 import { useState } from "react";
 import React from "react";
-const chevron = <i class="fa-solid fa-chevron-up"></i>;
+const chevron = <i className="fa-solid fa-chevron-up"></i>;
 
 function Accordion_Logement({ title, content }) {
     const [active, setActive] = useState(false);
@@ -10,11 +10,11 @@ function Accordion_Logement({ title, content }) {
     setActive(!active);
     };
     return (
-    <div className={`Accordion_Logement ${active && "active"}`}>
-        <div className="accordion__title" onClick={handleToggle}>
+    <div className={`AccordionLogement ${active && "active"}`}>
+        <div className="accordionTitle" onClick={handleToggle}>
             {title} <div>{chevron}</div>
         </div>
-        <div className="accordion__content">{content}</div>
+        <div className="accordionContent">{content}</div>
     </div>
     );
 }

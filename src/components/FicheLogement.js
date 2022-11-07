@@ -2,7 +2,7 @@ import data from "../data/logement_data.json";
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import "../styles/Accordion.css";
-import "../styles/Fiche_Logement.css";
+import "../styles/FicheLogement.css";
 import AccordionLogement from "./AccordionLogement";
 import Error from './Error';
 import Rate from '../components/Rate';
@@ -40,20 +40,13 @@ function FicheLogement({ title, content }) {
     const logementTitle = logement.title;
     const logementEquipments = logement.equipments;
     const logementLocation = logement.location
-    const logementName = logement.name
-    const logementTags = logement.tags;
     const logementHostName = logement.host.name;
     const logementHostPicture = logement.host.picture;
     const logementRating = logement.rating
 
     ////////////////--  map() des équipements  --////////////////
-    const map_LogementEquipement = logementEquipments.map((l, index) => (
-        <p className="p_equipement_logement">{logement.equipments[index]}</p>
-    ))
-
-    ////////////////--  map() des tags  --////////////////
-    const map_logementTags = logementTags.map((l, index) => (
-        <p className="p_equipement_logement" key={logement.tags[index]}>{logement.tags[index]}</p>
+    const mapLogementEquipement = logementEquipments.map((l, index) => (
+        <p className="pEquipementLogement" key={l}>{logement.equipments[index]}</p>
     ))
 
     ////////////////--  return()  --////////////////
@@ -74,8 +67,8 @@ function FicheLogement({ title, content }) {
                 </div>
 
                 <figcaption className="moreInfoContainer">
-                    <div className="logementNamePortrait">
-                        <h3>{logementHostName}</h3>
+                    <div className="logementNamePicture">
+                        <h3 className="logementName">{logementHostName}</h3>
                         <img className="logementHostPicture"
                             src={logementHostPicture}
                             alt="Portrait de l'annonceur"
@@ -91,14 +84,14 @@ function FicheLogement({ title, content }) {
 
             </figure>
 
-            <div className="Accordion_Logement">
+            <div className="AccordionLogement">
                 <AccordionLogement  
                     title="Description" 
                     content={logementDescription}
                 />
                 <AccordionLogement  
                     title="Equipements" 
-                    content={<div className='equipments'>{map_LogementEquipement}</div>}
+                    content={<div className='equipments'>{mapLogementEquipement}</div>}
                 />
             </div>
 
