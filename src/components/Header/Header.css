@@ -1,14 +1,17 @@
-.kasa-Banner {
+.kasaBanner {
     color: black;
     text-align: right;
-    padding: 32px;
+    margin: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.logoKasa {
+    height: 68px;
+}
 
-.kasa-Banner a {
+.kasaBanner a {
 	list-style-type: none;
 }
 
@@ -16,29 +19,19 @@
 	padding-left: 32px;
 }
 
-.logo_Kasa {
-	height: 68px;
-	width: 210.32px;
-    margin-left: 100px;
-}
-
-.Header_menu {
+.HeaderMenu {
     list-style: none;
     display: flex;
-    height: 34px;
     font-size: 24px;
-    color: #FF6060;
-    justify-content: space-between;
-    margin-right: 100px;
 }
 
-.Header_menu a {
+.HeaderMenu a {
 	height: 34px;
 	width: 136px;
     text-decoration: none;
     color:#FF6060;
 }
 
-.Header_menu a :hover{
+.HeaderMenu a :hover{
 	border-bottom: 3px solid #FF6060;
 }

@@ -23,7 +23,7 @@ function App() {
 								<APropos />
 							</>}
 						/>
-						<Route path="/Fiche_logement/:id"
+						<Route path="/FicheLogement/:id"
 							element={<>
 							<Slideshow/>
 							<FicheLogement />

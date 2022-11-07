@@ -43,24 +43,25 @@ function Slideshow() {
 ////////////////////RETURN////////////////////
 
     return (
-        <section className='section_slider'>
-                <FiChevronLeft className='left-arrow' onClick={prevSlide}/>
+        <section className='sectionSlider'>
+                
             <div className='slider'>
             {logement.pictures.map((l, index) => {
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} key={index}>
                         {index === current && (
-                        <div className="image_slider" 
+                        <div className="imageSlider" 
                             style={{
                                 backgroundImage: `url(${(logement.pictures[index])})`
                             }}>
+                                <FiChevronLeft className='left-arrow, arrow' onClick={prevSlide}/>
+                                <FiChevronRight className='right-arrow, arrow' onClick={nextSlide}/>
                         </div>
                         )}
                     </div>
                 )
             })}
             </div>
-            <FiChevronRight className='right-arrow' onClick={nextSlide}/>
         </section>
     )
 }

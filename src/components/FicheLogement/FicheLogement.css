@@ -1,6 +1,5 @@
 .infoLogementContainer {
-    width: 1240px;
-    margin: 15px auto;
+    margin: 0 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -9,19 +8,13 @@
     height: 10px;
 }
 
-.infoLogement {
-    width: 640px;
-}
-
 .infoLogementContainer h1 {
-    font-size: 18px;
     font-size: 36px;
     color: #FF6060;
 }
 
 .infoLogementContainer h2 {
     font-size: 18px;
-    line-height: 142.6%;
     color: #FF6060;
 }
 
@@ -41,6 +34,7 @@
 .tag {
     display: flex;
     color: #FFFFFF;
+    margin: 10px 0;
 }
 
 .logementHostPicture {
@@ -65,3 +59,33 @@
 .logementRating {
     margin: 10px 0 ;
 }
+
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 799px){
+
+    .infoLogement {
+        margin-left: 40px;
+    }
+
+    .infoLogementContainer {
+    flex-direction: column;
+    margin: 0;
+    }
+
+    .infoLogementContainer h1 {
+    }
+    
+    .infoLogementContainer h2 {
+    }
+    
+    .tagParagraphe {
+    }
+
+}
+
+
+

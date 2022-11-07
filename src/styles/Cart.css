@@ -6,12 +6,13 @@
 }
 
 .galleryImage {
-	background: #F7F7F7;
-	display: flex;
+    background: #F7F7F7;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-	justify-content: space-evenly;
-	border-radius: 25px;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    width: 95%;
 }
 
 .boxTitre {
@@ -45,13 +46,13 @@
 	width: 100%;
 }
 
-.section__p {
+.sectionP {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.section__p p {
+.sectionP p {
     color: white;
     font-size: 38px;
     display: flex;
@@ -65,4 +66,21 @@
     background-size: cover;
     background-color: #0000004d;
     background-blend-mode: darken;
+}
+
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 799px){
+
+    .galleryImage a {
+		width: 90%;
+	}
+
+	.boxKey {
+		width: 90%;
+	}
+
 }
