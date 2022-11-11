@@ -32,6 +32,7 @@
     height: 415px;
     display: flex;
 }
+
 .arrow {
     font-size: 10rem;
     color: white;
@@ -39,10 +40,16 @@
     cursor: pointer;
 }
 
-
+.slideNumber {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 350px;
+}
 
 /* RESPONSIVE */
- 
+
 
 
 @media (max-width: 799px){

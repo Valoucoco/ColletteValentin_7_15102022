@@ -45,7 +45,9 @@ function FicheLogement({ title, content }) {
     const logementRating = logement.rating
 
     ////////////////--  map() des équipements  --////////////////
-    const mapLogementEquipement = logementEquipments.map((l, index) => (
+
+
+    let mapLogementEquipement = logementEquipments.map((l, index) => (
         <p className="pEquipementLogement" key={l}>{logement.equipments[index]}</p>
     ))
 

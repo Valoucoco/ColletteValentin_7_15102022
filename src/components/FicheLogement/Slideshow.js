@@ -39,6 +39,12 @@ function Slideshow() {
         return null
     }
 
+    let chevronOrNot = "arrow";
+    if(logement.pictures.length === 1) {
+        console.log('une seule photo !')
+        chevronOrNot = "arrow, picturesAlone"
+    }
+
 
 ////////////////////RETURN////////////////////
 
@@ -54,8 +60,13 @@ function Slideshow() {
                             style={{
                                 backgroundImage: `url(${(logement.pictures[index])})`
                             }}>
-                                <FiChevronLeft className='left-arrow, arrow' onClick={prevSlide}/>
-                                <FiChevronRight className='right-arrow, arrow' onClick={nextSlide}/>
+                                <FiChevronLeft className={chevronOrNot} onClick={prevSlide}/>
+                                {index=== current && (
+                                    <span className='slideNumber'>
+                                        {current +1}/{length}
+                                    </span>
+                                )}
+                                <FiChevronRight className={chevronOrNot} onClick={nextSlide}/>
                         </div>
                         )}
                     </div>
