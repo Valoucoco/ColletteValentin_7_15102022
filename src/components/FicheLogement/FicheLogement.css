@@ -1,5 +1,5 @@
 .infoLogementContainer {
-    margin: 0 50px;
+    margin: 0 2.5%;
     display: flex;
     justify-content: space-between;
 }
@@ -54,10 +54,15 @@
 .logementNamePicture {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .logementRating {
     margin: 10px 0 ;
+}
+
+.logementRating img {
+    margin: 5px;
 }
 
 
@@ -93,7 +98,22 @@
     .moreInfoContainer {
         display: flex;
         flex-direction: row-reverse;
-        
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 5%;
+    }
+
+    .logementRating img {
+        width: 15px;
+    }
+
+    .logementHostPicture {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logementName {
+        font-size: 12px;
     }
 
 }

@@ -42,9 +42,11 @@ function Slideshow() {
 
     //variable chevronOrNot pour afficher ou non les chevrons en fonction du nombre d'images
     let chevronOrNot = "arrow";
+    let slideNumberOrNot = "slideNumber"
+
     if(logement.pictures.length === 1) {
-        console.log('une seule photo !')
-        chevronOrNot = "arrow, picturesAlone"
+        chevronOrNot = "maybeHide"
+        slideNumberOrNot = "maybeHide"
     }
 
 
@@ -63,7 +65,7 @@ function Slideshow() {
                             }}>
                                 <FiChevronLeft className={chevronOrNot} onClick={prevSlide}/>
                                 {index=== current && (
-                                    <span className='slideNumber'>
+                                    <span className={slideNumberOrNot}>
                                         {current +1}/{length}
                                     </span>
                                 )}

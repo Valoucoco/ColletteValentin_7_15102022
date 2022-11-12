@@ -1,7 +1,6 @@
 import data from "../../data/logement_data.json";
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import "../../styles/Accordion.css";
 import "./FicheLogement.css";
 import AccordionLogement from "./AccordionLogement";
 import Error from '../Error/Error';

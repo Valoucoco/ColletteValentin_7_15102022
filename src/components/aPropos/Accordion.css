@@ -19,7 +19,6 @@
 
 .accordionTitle:hover,.active .accordionTitle {
     cursor: pointer;
-    background: #FF6060;
 }
 
 .accordionContent {
@@ -43,14 +42,19 @@
     background: #f7f7f7;
     font-size: 24px;
     color: #FF6060;
+    margin-bottom: 20px;
+}
+
+.active {
+    margin: 0 5%;
 }
 
 .false {
     height: 80px;
+    margin: 0 5%;
 }
 
 .active i {
-    
     transition: 0.5s;
 }
 
@@ -59,30 +63,42 @@
     transition: 0.3s;
 }
 
-/* ACCORDIONLOGEMENT */
+/* RESPONSIVE */
 
 
-.AccordionLogement {
-    display: flex;
-    justify-content: center;
-}
 
-.AccordionLogement .false {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    justify-content: flex-start;
-    margin: 0 50px 0 50px;
-}
+@media (max-width: 799px){
 
-.AccordionLogement .active {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    justify-content: flex-start;
-    margin: 0 50px 0 50px;
-}
+    .accordionTitle {
+        font-size: 13px;
+    }
 
-.AccordionLogement div {
-    border-radius: 10px;
+    .false {
+        height: 80px;
+        margin: 0 5%;
+    }
+
+    .active {
+        margin: 0 5%;
+    }
+
+    .Accordion {
+        flex-direction: column;
+    }
+
+    .Accordion .false {
+        width: 90%;
+        margin: 0 5%
+    }
+
+    .Accordion .active {
+        width: 90%;
+        margin: 0 5%;
+        font-size: 12px;
+    }
+
+    .active .accordionContent {
+        font-size: 12px;
+    }
+
 }

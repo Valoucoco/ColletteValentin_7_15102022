@@ -1,6 +1,6 @@
-import '../styles/Cart.css'
-import LogementData from '../data/logement_data.json'
-import PartoutKasa from '../assets/Partout_Kasa.png'
+import './Cart.css'
+import LogementData from '../../data/logement_data.json'
+import PartoutKasa from '../../assets/Partout_Kasa.png'
 import { Link } from 'react-router-dom';
 
 

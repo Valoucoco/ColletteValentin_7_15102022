@@ -1,0 +1,55 @@
+.AccordionLogement {
+    display: flex;
+    justify-content: center;
+}
+
+.AccordionLogement .false {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+    margin: 0 2.5% 0 2.5%;
+}
+
+.AccordionLogement .active {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+    margin: 0 2.5% 0 2.5%;
+}
+
+.AccordionLogement div {
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 799px){
+
+    .accordionTitle {
+        font-size: 13px;
+    }
+
+    .AccordionLogement {
+        flex-direction: column;
+    }
+
+    .AccordionLogement .false {
+        width: 90%;
+        margin: 0 5%
+    }
+
+    .AccordionLogement .active {
+        width: 90%;
+        margin: 0 5%;
+        font-size: 12px;
+    }
+
+    .active .accordionContent {
+        font-size: 12px;
+    }
+
+}

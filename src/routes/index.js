@@ -4,7 +4,7 @@ import LayoutDefault from '../layouts/Default';
 import Error404 from '../components/Error/Error';
 import FicheLogement from '../components/FicheLogement/FicheLogement';
 import Slideshow from "../components/FicheLogement/Slideshow";
-import Cart from '../components/Cart'
+import Cart from '../components/Cart/Cart'
 import APropos from '../components/aPropos/APropos'
 
 const Router = () => {

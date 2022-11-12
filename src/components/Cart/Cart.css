@@ -13,6 +13,7 @@
     justify-content: space-evenly;
     border-radius: 25px;
     width: 95%;
+	padding-top: 20px;
 }
 
 .galleryImage a {
@@ -59,7 +60,7 @@
 
 .sectionP p {
     color: white;
-    font-size: 38px;
+    font-size: 48px;
     display: flex;
     width: 95%;
     height: 220px;
