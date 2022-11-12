@@ -35,10 +35,12 @@ function Slideshow() {
         setCurrent(current === 0 ? length -1 : current -1)
     }
 
+    //
     if(logement.pictures.length <= 0) {
         return null
     }
 
+    //variable chevronOrNot pour afficher ou non les chevrons en fonction du nombre d'images
     let chevronOrNot = "arrow";
     if(logement.pictures.length === 1) {
         console.log('une seule photo !')
@@ -47,7 +49,6 @@ function Slideshow() {
 
 
 ////////////////////RETURN////////////////////
-
     return (
         <section className='sectionSlider'>
                 
@@ -76,4 +77,4 @@ function Slideshow() {
         </section>
     )
 }
-            export default Slideshow
+export default Slideshow

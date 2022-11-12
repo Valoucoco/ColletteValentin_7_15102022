@@ -15,6 +15,12 @@
     width: 95%;
 }
 
+.galleryImage a {
+    width: 340px;
+    height: 340px;
+	margin: 20px 15px;
+}
+
 .boxTitre {
 	position: absolute;
 	left: 5.88%;
@@ -30,11 +36,10 @@
 }
 
 .boxKey {
-	height: 340px;
-	width: 340px;
+	height: 100%;
+	width: 100%;
 	position: relative;
 	display: flex;
-	margin: 40px 30px 30px 30px;
 	border-radius: 10px;
 	z-index: 1;
 	background-position: center;
@@ -75,12 +80,28 @@
 
 @media (max-width: 799px){
 
-    .galleryImage a {
-		width: 90%;
+	.galleryImage {
+		background-color: white;
+		margin: 20px 0;
 	}
 
-	.boxKey {
-		width: 90%;
+    .galleryImage a {
+		width: 100%;
+		height: 200px;
+		max-width: 100%;
+	}
+
+	/* .boxKey {
+		margin: 0 auto;
+		width: 100%;
+		margin-bottom: 25px;
+		height: 100%;
+	} */
+
+	.sectionP p {
+		font-size:  25px;
+		height: 111px;
+		margin: 0 auto;
 	}
 
 }
