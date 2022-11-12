@@ -35,7 +35,7 @@ function Slideshow() {
         setCurrent(current === 0 ? length -1 : current -1)
     }
 
-    //
+
     if(logement.pictures.length <= 0) {
         return null
     }
