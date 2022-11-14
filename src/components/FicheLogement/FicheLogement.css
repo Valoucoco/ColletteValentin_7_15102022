@@ -1,11 +1,17 @@
 .infoLogementContainer {
-    margin: 0 2.5%;
+    margin: 0 auto;
     display: flex;
+    max-width: 1440px;
     justify-content: space-between;
+    width: 95%;
+}
+
+.equipments {
+    margin-top: -20px;
 }
 
 .pEquipementLogement {
-    height: 10px;
+    height: 5px;
 }
 
 .infoLogementContainer h1 {
@@ -20,7 +26,6 @@
 
 .tagParagraphe {
     background: #ff6060;
-    width: 115px;
     border-radius: 10px;
     height: 25px;
     font-size: 14px;
@@ -29,12 +34,13 @@
     align-items: center;
     margin-right: 10px !important;
     margin: 0;
+    padding: 0 10px;
 }
 
 .tag {
     display: flex;
     color: #FFFFFF;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .logementHostPicture {
@@ -59,6 +65,10 @@
 
 .logementRating {
     margin: 10px 0 ;
+}
+
+.logementRating div {
+    display: flex;
 }
 
 .logementRating img {
