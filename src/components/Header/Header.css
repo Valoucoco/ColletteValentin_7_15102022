@@ -5,13 +5,12 @@
 .kasaBanner {
     color: black;
     text-align: right;
-    margin: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1440px;
     margin: auto;
-    padding: 2.5%;
+    padding: 40px;
 }
 
 .logoKasa {

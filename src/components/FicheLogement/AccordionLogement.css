@@ -1,24 +1,25 @@
 .AccordionLogement {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1440px;
     margin: 0 auto;
+    width: 95%;
 }
 
 .AccordionLogement .false {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 48%;
     justify-content: flex-start;
-    margin: 0 2.5% 0 2.5%;
+    margin: 0;
 }
 
 .AccordionLogement .active {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 48%;
     justify-content: flex-start;
-    margin: 0 2.5% 0 2.5%;
+    margin: 0;
 }
 
 .AccordionLogement div {
