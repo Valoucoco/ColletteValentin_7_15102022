@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+//je prépage pa fonction Tag pour l'importer dans FicheLogement
 function Tag({ logement }) {
 
     const tag = logement.tags;

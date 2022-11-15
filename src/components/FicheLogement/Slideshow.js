@@ -8,9 +8,14 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 function Slideshow() {
 
-////////////////////SET-LOGEMENT////////////////////
-
-    const [logement, setLogement] = useState({ tags: [], equipments: [], pictures: [], rating: '', host: { 'name': '', 'picture': '' } })
+////////////////////SET-LOGEMENT (logement aurait pu être en params de Slideshow)////////////////////
+    const [logement, setLogement] = useState({ 
+        tags: [],
+        equipments: [], 
+        pictures: [], 
+        rating: '', 
+        host: { 'name': '', 'picture': '' } 
+    })
     const { id } = useParams()
     
     useEffect(() => {
@@ -27,6 +32,7 @@ function Slideshow() {
     const [current, setCurrent] = useState(0)
     const length = logement.pictures.length
 
+    //je prépare mes constantes pour le onClick des chevrons
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current +1)
     }
@@ -35,12 +41,11 @@ function Slideshow() {
         setCurrent(current === 0 ? length -1 : current -1)
     }
 
-
     if(logement.pictures.length <= 0) {
         return null
     }
 
-    //variable chevronOrNot pour afficher ou non les chevrons en fonction du nombre d'images
+    //variable chevronOrNot pour afficher ou non les chevrons et le compteur en fonction du nombre d'image
     let chevronOrNot = "arrow";
     let slideNumberOrNot = "slideNumber"
 
@@ -55,6 +60,7 @@ function Slideshow() {
         <section className='sectionSlider'>
                 
             <div className='slider'>
+                {/* je boucle sur les photos du logement pour afficher l'image avec l'index qui équivault à current */}
             {logement.pictures.map((l, index) => {
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} key={index}>

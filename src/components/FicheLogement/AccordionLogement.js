@@ -3,6 +3,7 @@ import { useState } from "react";
 import React from "react";
 const chevron = <i className="fa-solid fa-chevron-up"></i>;
 
+//je créé ma fonction Accordion_Logement et lui glisse en paramètre title et content, qui sont défini dans la FicheLogement
 function Accordion_Logement({ title, content }) {
     const [active, setActive] = useState(false);
 

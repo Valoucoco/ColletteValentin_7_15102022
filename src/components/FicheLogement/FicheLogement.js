@@ -7,7 +7,9 @@ import Error from '../Error/Error';
 import Rate from './Rate';
 import Tags from './Tags';
 
+// le créé ma fonction FicheLogement et récupère toutes les information du json à partir de l'id qui est dans l'URL avec useParams
 function FicheLogement({ title, content }) {
+
     const [logement, setLogement] = useState({
     tags: [],
     equipments: [],
@@ -17,6 +19,7 @@ function FicheLogement({ title, content }) {
     });
     const { id } = useParams();
 
+    // je configure la constante logement avec les datas qui ont le même id que dans l'URL
     useEffect(() => {
     data.map((house) => {
         if (house.id === id) {
@@ -27,7 +30,6 @@ function FicheLogement({ title, content }) {
     }, [id]);
 
     ////////////////--  si l'id n'existe pas (titre inéxistant) alors go to 404  --////////////////
-
     if (logement.title === undefined) {
         return <Error />;
     }
@@ -43,15 +45,12 @@ function FicheLogement({ title, content }) {
     const logementHostPicture = logement.host.picture;
     const logementRating = logement.rating
 
-    ////////////////--  map() des équipements  --////////////////
-
-
+    ////////////////--  map() des équipements sur logement.equipement du logement en question [index]  --////////////////
     let mapLogementEquipement = logementEquipments.map((l, index) => (
         <p className="pEquipementLogement" key={l}>{logement.equipments[index]}</p>
     ))
 
     ////////////////--  return()  --////////////////
-
     return (
         <section>
             
@@ -60,15 +59,14 @@ function FicheLogement({ title, content }) {
 
                 <div className="infoLogement">
                     <h1>{logementTitle}</h1>
-
                     <h2>{logementLocation}</h2>
-
                     <div className="tagsContainer">
                         <Tags logement={logement} />
                     </div>
                 </div>
 
                 <figcaption className="moreInfoContainer">
+
                     <div className="logementNamePicture">
                         <h3 className="logementName">{logementHostName}</h3>
                         <img className="logementHostPicture"
@@ -78,14 +76,13 @@ function FicheLogement({ title, content }) {
                     </div>
 
                     <div className='logementRating'>
-                        <Rate 
-                            logement={logementRating}
-                        />
+                        <Rate logement={logementRating}/>
                     </div>
                 </figcaption>
 
             </figure>
 
+            {/* je donne à AccordionLogement le title et le content necessaire */}
             <div className="AccordionLogement">
                 <AccordionLogement  
                     title="Description" 
